@@ -19,7 +19,6 @@ else if($_SESSION["username"] != "admin")
 
 <div class="topnav">
     <a style="background-color: black" href="index.php">Home</a>
-    <!--Later: <a style="background-color: darkgreen" href="#support">Support</a>-->
     <a style="background-color: #3b3b86" href="../leaderboards.php">Leaderboards</a>
     <?php 
     // Show the games and the logout button if the user is logged in
@@ -29,10 +28,12 @@ else if($_SESSION["username"] != "admin")
     <a style="background-color: darkorange" href="../word7e/game.php">Word7e</a>
     <a style="background-color: red; float: right" href="../logout.php"> Logout</a>
     <a style="color: gold; float: right; font-size: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> <?php echo htmlspecialchars($_SESSION["username"]); ?> </a>
+    <a style="background-color: darkblue; float:right" href="filter.php">Filter Tables</a>
     <a style="background-color: blue; float:right" href="game/index.php">Game</a>
     <a style="background-color: darkslateblue; float:right" href="player/index.php">Player</a>
     <a style="background-color: purple; float:right" href="plays/index.php">Plays</a>
     <a style="color: white; background-color: black; float: right;">Manage Tables:</a>
+    
     <?php 
     // Show the login and sign up buttons if the user is not logged in
     else : ?>
@@ -40,7 +41,7 @@ else if($_SESSION["username"] != "admin")
     <a style="background-color: darkblue; float:right" href="../register.php" >Sign Up</a>
     <?php endif; 
     ?>
-    
+    <a style="background-color: darkgreen" href="../support/admin.php">Support</a>
   </div>
   
   <div>

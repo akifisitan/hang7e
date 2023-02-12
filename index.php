@@ -22,7 +22,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["
 <body>
   <div class="topnav">
     <a style="background-color: black" href="index.php">Home</a>
-    <!--Later: <a style="background-color: darkgreen" href="#support">Support</a>-->
+    <a style="background-color: darkgreen" href="support/index.php">Support</a>
     <a style="background-color: #3b3b86" href="leaderboards.php">Leaderboards</a>
     <?php 
     // Show the games and the logout button if the user is logged in
