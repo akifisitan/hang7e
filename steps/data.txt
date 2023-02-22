@@ -1,0 +1,39 @@
+CREATE TABLE game (
+gid int(1) NOT NULL AUTO_INCREMENT,
+gname char(20) NOT NULL,
+PRIMARY KEY (gid));
+CREATE TABLE player (
+pid int(10) NOT NULL AUTO_INCREMENT,
+username char(20) UNIQUE NOT NULL,
+alias char(20) NOT NULL,
+password VARCHAR(100) NOT NULL,
+PRIMARY KEY (pid));
+CREATE TABLE plays (
+pid int(10) NOT NULL,
+gid int(1) NOT NULL,
+wins int(20) NOT NULL,
+losses int(20) NOT NULL,
+points int(20) NOT NULL,
+PRIMARY KEY (pid, gid),
+FOREIGN KEY (pid) REFERENCES player(pid) ON DELETE CASCADE,
+FOREIGN KEY (gid) REFERENCES game(gid) ON DELETE CASCADE);
+
+INSERT INTO game (gid, gname)
+VALUES (1, "word7e"), (2, "hangman");
+INSERT INTO player (username, alias, password) VALUES
+('admin', 'admin', '$2y$10$2D3gYB/kfHBtipcXUyWnMe.d7x571kjQMmZLhpF7IW3.78Hvhd47C'),
+('leomessi', 'Messi',
+'$2y$10$m90UMJS621iCuZfrqbK6YubldZ.bZls0ixwTDn.wtK5FpZ0BrddpS'),
+('cristianoronaldo', 'CR7',
+'$2y$10$vdmv1WNku4lPBXlIp91QQ.9A4XpZo/QKkH2oUrLvUENShJcWgd1ue'),
+('zlatanibrahimovic', 'Ibra',
+'$2y$10$EILZPJ7MWnDcB5tw26KCLeEXfH4iDNmUhy5GpI75FxIhJdOaAHHIy'),
+('kylianmbappe', 'Mbappe',
+'$2y$10$eoxYa8pUrkoAWYkaO7KXg.h4TZTMoAE0ObgaqqNDFnl8cquLCcsCq'),
+('garethbale', 'Bale',
+'$2y$10$8ydpOYnyX1AtXHcYdZgM0uIfTI/jwg8oUX8I3hp4JyPf0nUvybVYi');
+INSERT INTO plays (pid, gid, wins, losses, points) VALUES
+(6, 1, 11, 1, 1500), (2, 1, 10, 2, 1400), (3, 1, 9, 3, 1300), (4, 1, 3, 1, 1100), (5,
+1, 5, 1, 1200),
+(2, 2, 11, 1, 1500), (5, 2, 10, 2, 1400), (6, 2, 9, 3, 1300), (4, 2, 3, 1, 1100), (3,
+2, 6, 2, 1200);

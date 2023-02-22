@@ -41,7 +41,7 @@ else if($_SESSION["username"] != "admin")
     <a style="background-color: darkblue; float:right" href="../register.php" >Sign Up</a>
     <?php endif; 
     ?>
-    <a style="background-color: darkgreen" href="../support/admin.php">Support</a>
+    <a style="background-color: darkgreen" href="../#support">Support</a>
   </div>
   
   <div>
