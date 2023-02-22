@@ -29,7 +29,7 @@ CS306 - Database Systems Course Project
 7. Navigate [here](http://localhost/hang7e/) in your browser.
 
 ## Games
-- [Hangman](#http://localhost/hang7e/hangman/game.php)
+- [Hangman](http://localhost/hang7e/hangman/game.php)
 <br>Classic hangman game 
-- [Word7e](#http://localhost/hang7e/word7e/game.php)
+- [Word7e](http://localhost/hang7e/word7e/game.php)
 <br>Wordle but with 7 letters
